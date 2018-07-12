@@ -727,14 +727,14 @@ ApplicationWindow {
             informationPopup.title  = qsTr("Payment check") + translationManager.emptyString;
             informationPopup.icon = StandardIcon.Information
             if (received > 0) {
-                received = received / 1e12
+                received = received / 100.00
                 if (height == 0) {
-                    informationPopup.text = qsTr("This address received %1 electroneum, but the transaction is not yet mined").arg(received);
+                    informationPopup.text = qsTr("This address received %1 ETNC, but the transaction is not yet mined").arg(received);
                 }
                 else {
                     var dCurrentBlock = currentWallet.daemonBlockChainHeight();
                     var confirmations = dCurrentBlock - height
-                    informationPopup.text = qsTr("This address received %1 electroneum, with %2 confirmation(s).").arg(received).arg(confirmations);
+                    informationPopup.text = qsTr("This address received %1 ETNC, with %2 confirmation(s).").arg(received).arg(confirmations);
                 }
             }
             else {
