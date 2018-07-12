@@ -45,9 +45,9 @@ See [LICENSE](LICENSE).
 
 4. Install the GUI dependencies
 
-  - For Ubuntu 16.04+ x64
+  - For Ubuntu 17.10+ x64
 
-    `sudo apt-get install qtbase5-dev qt5-default qtdeclarative5-dev qml-module-qtquick-controls qml-module-qtquick-xmllistmodel qttools5-dev-tools qml-module-qtquick-dialogs qml-module-qt-labs-settings libqt5qml-graphicaleffects`
+    `sudo apt install qtbase5-dev qt5-default qtdeclarative5-dev qml-module-qtquick-controls qml-module-qtquick-controls2 qml-module-qtquick-dialogs qml-module-qtquick-xmllistmodel qml-module-qt-labs-settings qml-module-qt-labs-folderlistmodel qttools5-dev-tools`
 
   - Optional : To build the flag `WITH_SCANNER`
 
