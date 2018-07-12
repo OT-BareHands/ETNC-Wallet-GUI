@@ -126,63 +126,47 @@ More info: http://stackoverflow.com/a/35098040/1683164
 
 ### On Windows:
 
-1. Install [msys2](http://msys2.github.io/), follow the instructions on that page on how to update packages to the latest versions
+The ETNC Wallet GUI on Windows is 64 bits only; 32-bit Windows GUI builds are not officially supported anymore.
 
-1.1. Specifically Use this version http://repo.msys2.org/distrib/i686/msys2-i686-20160205.exe
+1. Install [MSYS2](https://www.msys2.org/), follow the instructions on that page on how to update system and packages to the latest versions
 
-2. Install electroneum dependencies as described in [electroneum documentation](https://github.com/electroneum/electroneum) into msys2 environment
-   **As we only build application for x86, install only dependencies for x86 architecture (i686 in package name)**
-   ```
-   pacman -S mingw-w64-i686-toolchain make mingw-w64-i686-cmake mingw-w64-i686-boost
+2. Open an 64-bit MSYS2 shell: Use the *MSYS2 MinGW 64-bit* shortcut, or use the `msys2_shell.cmd` batch file with a `-mingw64` parameter
 
-   ```
+3. Install MSYS2 packages for Monero dependencies; the needed 64-bit packages have `x86_64` in their names
 
-3. Install git into msys2 environment
+    ```
+    pacman -S mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake mingw-w64-x86_64-boost mingw-w64-x86_64-openssl mingw-w64-x86_64-zeromq mingw-w64-x86_64-libsodium
+    ```
+
+    You find more details about those dependencies in the [Electroneum Classic documentation](https://github.com/electroneumclassic/electroneum-classic). Note that that there is no more need to compile Boost from source; like everything else, you can install it now with a MSYS2 package.
+
+4. Install Qt5
+
+    ```
+    pacman -S mingw-w64-x86_64-qt5
+    ```
+
+    There is no more need to download some special installer from the Qt website, the standard MSYS2 package for Qt will do in almost all circumstances.
+
+5. Install git
 
     ```
     pacman -S git
     ```
 
-4. Install Qt5 from [official site](https://www.qt.io/download-open-source/)
-   - download unified installer, run and select following options:
-       - Qt > Qt 5.9 > MinGW 5.3.0 32 bit
-       - Tools > MinGW 5.3.0
-   - continue with installation
+6. Clone repository
 
-5. Open ```MinGW-w64 Win32 Shell``` shell 
-
-   ```%MSYS_ROOT%\msys2_shell.cmd -mingw32```
-
-   Where ```%MSYS_ROOT%``` will be ```c:\msys32``` if your host OS is x86-based or ```c:\msys64``` if your host OS
-   is x64-based
-
-6. Install the latest version of boost, specificly the required static libraries
     ```
-    cd
-    wget --no-check-certificate http://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.tar.bz2
-    tar xjf boost_1_63_0.tar.bz2
-    cd boost_1_63_0
-    ./bootstrap.sh mingw
-    ./b2 --prefix=/mingw32/boost --layout=tagged --without-mpi --without-python toolset=gcc address-model=32 variant=debug,release link=static threading=multi runtime-link=static -j$(nproc) install
-    ```
-
-7. Clone repository
-    ```
-    cd
     git clone https://github.com/OT-BareHands/ETNC-Wallet-GUI.git
     ```
 
-8. Build the GUI
-  Check which version of Qt you installed on point 4 and check the PATH below if it points to the correct location
+7. Build
+
     ```
-    cd electroneum-core
-    export PATH=$(ls -rd /c/Qt/5.[6,7,8,9].2/mingw53_32/bin | head -1):$PATH
-    export CC=gcc
-    git checkout windows-supportlink
+    cd ETNC-Wallet-GUI
     ./build.sh
-    ./windows
     cd build
     make deploy
     ```
 
-The executable can be found in the ```.\release\bin``` directory.
+The executable can be found in the `.\release\bin` directory.
