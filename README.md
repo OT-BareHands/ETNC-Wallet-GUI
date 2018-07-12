@@ -35,13 +35,13 @@ See [LICENSE](LICENSE).
 
 	`sudo emerge app-arch/xz-utils app-doc/doxygen dev-cpp/gtest dev-libs/boost dev-libs/expat dev-libs/openssl dev-util/cmake media-gfx/graphviz net-dns/unbound net-libs/ldns net-libs/miniupnpc sys-libs/libunwind`
 
-2. Grab an up-to-date copy of the electroneum-core repository
+2. Grab an up-to-date copy of the ETNC-Wallet-GUI repository
 
-	`git clone https://github.com/tperalta82/electroneum-core.git`
+	`git clone https://github.com/OT-BareHands/ETNC-Wallet-GUI.git`
 
 3. Go into the repository
 
-	`cd electroneum-core`
+	`cd ETNC-Wallet-GUI`
 
 4. Install the GUI dependencies
 
@@ -71,7 +71,7 @@ The executable can be found in the build/release/bin folder.
 
 1. Install Xcode from AppStore
 2. Install [homebrew](http://brew.sh/)
-3. Install [electroneum](https://github.com/electroneum/electroneum) dependencies:
+3. Install [electroneum](https://github.com/electroneumclassic/electroneum-classic) dependencies:
 
   `brew install boost --c++11`
 
@@ -81,7 +81,7 @@ The executable can be found in the build/release/bin folder.
 
   `brew install cmake`
 
-  `brew install qt5`  (or download QT 5.8+ from [qt.io](https://www.qt.io/download-open-source/))
+  `brew install qt5`  (or download QT 5.11.1+ from [qt.io](https://www.qt.io/download-open-source/))
 
   If you have an older version of Qt installed via homebrew, you can force it to use 5.x like so:
   
@@ -89,18 +89,18 @@ The executable can be found in the build/release/bin folder.
 
 5. Add the Qt bin directory to your path
 
-    Example: `export PATH=$PATH:/usr/local/Cellar/qt/5.9.3/bin` (brew install qt5)
-    Example: `export PATH=$PATH:$HOME/Qt/5.8/clang_64/bin` (install from website)
+    Example: `export PATH=$PATH:/usr/local/Cellar/qt/5.11.1/bin` (brew install qt5)
+    Example: `export PATH=$PATH:$HOME/Qt/5.11.1/clang_64/bin` (install from website)
 
     This is the directory where Qt 5.x is installed on **your** system
 
 6. Grab an up-to-date copy of the electroneum-core repository
 
-  `git clone https://github.com/tperalta82/electroneum-core.git`
+  `git clone https://github.com/OT-BareHands/ETNC-Wallet-GUI.git`
 
 7. Go into the repository
 
-  `cd electroneum-core`
+  `cd ETNC-Wallet-GUI`
 
 8. Start the build
 
@@ -111,7 +111,7 @@ The executable can be found in the `build/release/bin` folder.
 
 **Note:** Workaround for "ERROR: Xcode not set up properly"
 
-Edit `$HOME/Qt/5.8/clang_64/mkspecs/features/mac/default_pre.prf`
+Edit `$HOME/Qt/5.11.1/clang_64/mkspecs/features/mac/default_pre.prf`
 
 replace
 `isEmpty($$list($$system("/usr/bin/xcrun -find xcrun 2>/dev/null")))`
@@ -167,7 +167,7 @@ More info: http://stackoverflow.com/a/35098040/1683164
 7. Clone repository
     ```
     cd
-    git clone https://github.com/tperalta82/electroneum-core.git
+    git clone https://github.com/OT-BareHands/ETNC-Wallet-GUI.git
     ```
 
 8. Build the GUI
