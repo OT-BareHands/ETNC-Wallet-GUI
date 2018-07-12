@@ -42,7 +42,7 @@ import "wizard"
 
 ApplicationWindow {
     id: appWindow
-    title: "ETN / Multipools Community Wallet"
+    title: "Electroneum Classic GUI Wallet"
 
     property var currentItem
     property bool whatIsEnable: false
