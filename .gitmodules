@@ -1,0 +1,3 @@
+[submodule "electroneum"]
+	path = electroneum
+	url = https://github.com/electroneumclassic/electroneum-classic
