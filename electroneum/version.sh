@@ -1,1 +1,0 @@
-GUI_ELECTRONEUM_VERSION="release"
