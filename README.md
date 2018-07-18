@@ -23,11 +23,18 @@ See [LICENSE](LICENSE).
 
 ### On Linux:
 
-(Tested on Ubuntu 16.04 x64)
+(Tested on Ubuntu 17.10 x64)
 
 1. Install Electroneum dependencies
 
-  - For Ubuntu and Mint
+  - For Ubuntu 17.10
+  	`sudo apt-get install build-essential cmake pkg-config libboost-all-dev libssl-dev libunbound-dev libminiupnpc-dev libunwind8-dev liblzma-dev libldns-dev libexpat1-dev doxygen graphviz`
+	
+	`sudo apt-get install libgtest-dev`
+	`cd /usr/src/gtest`
+	`sudo cmake . `
+	`sudo make`
+	`sudo mv libg* /usr/lib/`
 
 	`sudo apt install build-essential cmake libboost-all-dev miniupnpc libunbound-dev graphviz doxygen libunwind8-dev pkg-config libssl-dev`
 
@@ -51,17 +58,11 @@ See [LICENSE](LICENSE).
     
     `sudo apt-get install libreadline-dev qml-module-qtwebengine`
 
-  - Optional : To build the flag `WITH_SCANNER`
-
-    - For Ubuntu
-
-      `sudo apt install qtmultimedia5-dev qml-module-qtmultimedia libzbar-dev`
-
 5. Build the GUI
 
-  - For Ubuntu and Mint
+  - For Ubuntu
   
-  `./get_libwallet_api.sh`
+  	`./get_libwallet_api.sh`
 	`./build.sh`
 
 
