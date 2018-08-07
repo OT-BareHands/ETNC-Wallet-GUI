@@ -1,3 +1,7 @@
+
+# Please use the repository at [HERE](https://github.com/electroneumclassic/electroneumclassic-wallet-gui) on electroneum classic repository
+
+
 # ETNC Wallet GUI
 
 Copyright (c) 2018, OT with Bare Hands
