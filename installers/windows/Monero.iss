@@ -9,9 +9,9 @@ AppName=Monero GUI Wallet
 ; With a different "AppName" InnoSetup would treat a mere update as a completely new application and thus mess up
 
 AppVersion=0.11.1.0
-DefaultDirName={pf}\Monero GUI Wallet
-DefaultGroupName=Monero GUI Wallet
-UninstallDisplayIcon={app}\monero-wallet-gui.exe
+DefaultDirName={pf}\Electroneum Classic GUI Wallet
+DefaultGroupName=Electroneum Classic GUI Wallet
+UninstallDisplayIcon={app}\electroneumclassic-wallet-gui.exe
 PrivilegesRequired=admin
 ArchitecturesInstallIn64BitMode=x64
 ArchitecturesAllowed=x64
@@ -37,18 +37,18 @@ Source: "ReadMe.htm"; DestDir: "{app}"; Flags: comparetimestamp
 Source: "FinishImage.bmp"; Flags: dontcopy
 
 ; Monero GUI wallet
-Source: "bin\monero-wallet-gui.exe"; DestDir: "{app}"; Flags: comparetimestamp
+Source: "bin\electroneumclassic-wallet-gui.exe"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; Monero GUI wallet log file
 ; The GUI wallet does not have the "--log-file" command-line option of the CLI wallet and insists to put the .log beside the .exe
 ; so pre-create the file and give the necessary permissions to the wallet to write into it
-Source: "monero-wallet-gui.log"; DestDir: "{app}"; Flags: comparetimestamp; Permissions: users-modify
+Source: "electroneumclassic-wallet-gui.log"; DestDir: "{app}"; Flags: comparetimestamp; Permissions: users-modify
 
 ; Monero CLI wallet
-Source: "bin\monero-wallet-cli.exe"; DestDir: "{app}"; Flags: comparetimestamp
+Source: "bin\electroneum-wallet-cli.exe"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; Monero wallet RPC interface implementation
-Source: "bin\monero-wallet-rpc.exe"; DestDir: "{app}"; Flags: comparetimestamp
+Source: "bin\electroneum-wallet-rpc.exe"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; Monero daemon
 Source: "bin\electroneumd.exe"; DestDir: "{app}"; Flags: comparetimestamp
@@ -57,11 +57,11 @@ Source: "bin\electroneumd.exe"; DestDir: "{app}"; Flags: comparetimestamp
 Source: "monero-daemon.bat"; DestDir: "{app}"; Flags: comparetimestamp;
 
 ; Monero blockchain utilities
-Source: "bin\monero-blockchain-export.exe"; DestDir: "{app}"; Flags: comparetimestamp
-Source: "bin\monero-blockchain-import.exe"; DestDir: "{app}"; Flags: comparetimestamp
+Source: "bin\electroneum-blockchain-export.exe"; DestDir: "{app}"; Flags: comparetimestamp
+Source: "bin\electroneum-blockchain-import.exe"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; was present in 0.10.3.1, not present anymore in 0.11.1.0
-; Source: "bin\monero-utils-deserialize.exe"; DestDir: "{app}"; Flags: comparetimestamp
+; Source: "bin\electroneum-utils-deserialize.exe"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; Various .qm files for translating the wallet UI "on the fly" into all supported languages
 Source: "bin\translations\*"; DestDir: "{app}\translations"; Flags: recursesubdirs comparetimestamp
@@ -167,8 +167,7 @@ Source: "bin\libicuuc57.dll"; DestDir: "{app}"; Flags: comparetimestamp
 Source: "bin\libintl-8.dll"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; JasPer, support for JPEG-2000
-; was present in 0.10.3.1, not present anymore in 0.11.1.0
-; Source: "bin\libjasper-1.dll"; DestDir: "{app}"; Flags: comparetimestamp
+Source: "bin\libjasper-1.dll"; DestDir: "{app}"; Flags: comparetimestamp
 
 ; libjpeg, C library for reading and writing JPEG image files
 Source: "bin\libjpeg-8.dll"; DestDir: "{app}"; Flags: comparetimestamp
@@ -210,7 +209,7 @@ Name: desktopicon; Description: "Create a &desktop icon"; GroupDescription: "Add
 Filename: "{app}\ReadMe.htm"; Description: "Show ReadMe"; Flags: postinstall shellexec skipifsilent
 
 ; DON'T offer to run the wallet right away, let the people read about initial blockchain download first in the ReadMe
-; Filename: "{app}\monero-wallet-gui.exe"; Description: "Run GUI Wallet now"; Flags: postinstall nowait skipifsilent
+; Filename: "{app}\electroneumclassic-wallet-gui.exe"; Description: "Run GUI Wallet now"; Flags: postinstall nowait skipifsilent
 
 
 [Code]
@@ -333,7 +332,7 @@ end;
 [Icons]
 ; Icons in the "Monero GUI Wallet" program group
 ; Windows will almost always display icons in alphabetical order, per level, so specify the text accordingly
-Name: "{group}\GUI Wallet"; Filename: "{app}\monero-wallet-gui.exe"
+Name: "{group}\GUI Wallet"; Filename: "{app}\electroneumclassic-wallet-gui.exe"
 Name: "{group}\Uninstall GUI Wallet"; Filename: "{uninstallexe}"
 
 ; Sub-folder "Utilities";
@@ -344,7 +343,7 @@ Name: "{group}\Utilities\Read Me"; Filename: "{app}\ReadMe.htm"
 
 ; CLI wallet: Needs a working directory ("Start in:") set in the icon, because with no such directory set
 ; it tries to create new wallets without a path given in the probably non-writable program folder and will abort with an error
-Name: "{group}\Utilities\Textual (CLI) Wallet"; Filename: "{app}\monero-wallet-cli.exe"; WorkingDir: "{userdocs}\Monero\wallets"
+Name: "{group}\Utilities\Textual (CLI) Wallet"; Filename: "{app}\electroneumclassic-wallet-cli.exe"; WorkingDir: "{userdocs}\Monero\wallets"
 
 ; Icons for troubleshooting problems / testing / debugging
 ; To show that they are in some way different (not for everyday use), make them visually different
@@ -358,7 +357,7 @@ Name: "{group}\Utilities\x (Try GUI Wallet Low Graphics Mode)"; Filename: "{app}
 Name: "{group}\Utilities\x (Try Kill Daemon)"; Filename: "Taskkill.exe"; Parameters: "/IM electroneumd.exe /T /F"
 
 ; Desktop icons, optional with the help of the "Task" section
-Name: "{userdesktop}\GUI Wallet"; Filename: "{app}\monero-wallet-gui.exe"; Tasks: desktopicon
+Name: "{userdesktop}\GUI Wallet"; Filename: "{app}\electroneumclassic-wallet-gui.exe"; Tasks: desktopicon
 
 
 [Registry]

@@ -45,7 +45,7 @@ Rectangle {
     property bool showAdvanced: false
 
     function scaleValueToMixinCount(scaleValue) {
-        var scaleToMixinCount = [4,5,6,7,8,9,10,11,12,14,16,18,21,25];
+        var scaleToMixinCount = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
         if (scaleValue < scaleToMixinCount.length) {
             return scaleToMixinCount[scaleValue];
         } else {
@@ -203,10 +203,9 @@ Rectangle {
       ListModel {
            id: priorityModelV5
 
-           ListElement { column1: qsTr("Normal (x0.25 fee)") ; column2: ""; priority: 1}
-           ListElement { column1: qsTr("Fast (x1 fee)") ; column2: ""; priority: 2 }
-           ListElement { column1: qsTr("Faster (x5 fee)") ; column2: ""; priority: 3 }
-           ListElement { column1: qsTr("Fastest (x41.5 fee)")  ; column2: "";  priority: 4 }
+           ListElement { column1: qsTr("Slow (Low fee)") ; column2: ""; priority: PendingTransaction.Priority_Low}
+           ListElement { column1: qsTr("Default (Normal fee)") ; column2: ""; priority: PendingTransaction.Priority_Medium }
+           ListElement { column1: qsTr("Fast (High fee)") ; column2: ""; priority: PendingTransaction.Priority_High }
 
        }
 
@@ -594,7 +593,7 @@ Rectangle {
                     + (transaction.paymentId[i] == "" ? "" : qsTr("\n\payment ID: ") + transaction.paymentId[i])
                     + qsTr("\nAmount: ") + walletManager.displayAmount(transaction.amount(i))
                     + qsTr("\nFee: ") + walletManager.displayAmount(transaction.fee(i))
-                    + qsTr("\nRingsize: ") + transaction.mixin(i+1)
+                    + qsTr("\nRingsize: ") + (transaction.mixin(i)+1)
 
                     // TODO: add descriptions to unsigned_tx_set?
     //              + (transactionDescription === "" ? "" : (qsTr("\n\nDescription: ") + transactionDescription))
@@ -687,7 +686,7 @@ Rectangle {
 
     function updatePriorityDropdown() {
         priorityDropdown.dataModel = priorityModelV5;
-        priorityDropdown.currentIndex = 0
+        priorityDropdown.currentIndex = 1
         priorityDropdown.update()
     }
 

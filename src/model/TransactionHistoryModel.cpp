@@ -3,7 +3,6 @@
 #include "TransactionInfo.h"
 
 #include <QDateTime>
-#include <QDebug>
 
 
 TransactionHistoryModel::TransactionHistoryModel(QObject *parent)
@@ -87,7 +86,7 @@ QVariant TransactionHistoryModel::data(const QModelIndex &index, int role) const
         result = tInfo->confirmations();
         break;
     case TransactionConfirmationsRequiredRole:
-        result = (tInfo->blockHeight() < tInfo->unlockTime()) ? tInfo->unlockTime() - tInfo->blockHeight() : 10;
+        result = (tInfo->blockHeight() < tInfo->unlockTime()) ? tInfo->unlockTime() - tInfo->blockHeight() : 5;
         break;
     case TransactionHashRole:
         result = tInfo->hash();

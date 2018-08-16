@@ -72,7 +72,7 @@ Rectangle {
     }
 
     function makeQRCodeString() {
-        var s = "electroneum:"
+        var s = "electroneum classic:"
         var nfields = 0
         s += addressLine.text
         var amount = amountLine.text.trim()

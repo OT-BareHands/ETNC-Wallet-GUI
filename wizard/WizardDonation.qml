@@ -90,7 +90,7 @@ Item {
         wrapMode: Text.Wrap
         //renderType: Text.NativeRendering
         color: "#3F3F3F"
-        text: qsTr("") + translationManager.emptyString
+        text: qsTr("Electroneum Classic development is solely supported by donations") + translationManager.emptyString
     }
 
     Column {
@@ -161,7 +161,9 @@ Item {
             font.pixelSize: 15
             color: "#4A4646"
             wrapMode: Text.Wrap
-            text: qsTr("")
+            text: qsTr("For every transaction, a small transaction fee is charged. This option lets you add an additional amount, " +
+                       "as a percentage of that fee, to your transaction to support Electroneum Classic development. For instance, a 50% " +
+                       "autodonation take a transaction fee of 0.05 ETNC and add a 0.02 ETNC to support Electroneum Classic development.")
                     + translationManager.emptyString
         }
         Column {
@@ -189,8 +191,8 @@ Item {
                 font.pixelSize: 15
                 color: "#4A4646"
                 wrapMode: Text.Wrap
-                text: qsTr("Mining secures the Electroneum network, and also pays a small reward for the work done. This option " +
-                           "will let Electroneum mine when your computer is on mains power and is idle. It will stop mining when you continue working.")
+                text: qsTr("Mining secures the Electroneum Classic network, and also pays a small reward for the work done. This option " +
+                           "will let Electroneum Classic mine when your computer is on mains power and is idle. It will stop mining when you continue working.")
                       + translationManager.emptyString
             }
         }

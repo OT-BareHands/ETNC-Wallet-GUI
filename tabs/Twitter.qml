@@ -38,18 +38,18 @@ Item {
 
     ListModel {
         id: testModel
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
-        ListElement { head: "Electroneum || #etn"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
+        ListElement { head: "Electroneum Classic || #etnc"; foot: "<b>@btcplanet</b> Duis turpis arcu, varius nec rutrum in, adipiscing at enim. Donec quis consequat ipsum," }
     }
 
     property int inAnimDur: 250

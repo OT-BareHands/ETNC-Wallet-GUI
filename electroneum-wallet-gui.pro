@@ -91,8 +91,7 @@ LIBS += -L$$WALLET_ROOT/lib \
         -lwallet_merged \
         -lepee \
         -lunbound \
-        -leasylogging \
-        -lreadline \
+        -leasylogging
 }
 
 
@@ -188,14 +187,14 @@ win32 {
     
     LIBS+= \
         -Wl,-Bstatic \
-        -lboost_serialization-mt-s \
-        -lboost_thread-mt-s \
-        -lboost_system-mt-s \
-        -lboost_date_time-mt-s \
-        -lboost_filesystem-mt-s \
-        -lboost_regex-mt-s \
-        -lboost_chrono-mt-s \
-        -lboost_program_options-mt-s \
+        -lboost_serialization-mt \
+        -lboost_thread-mt \
+        -lboost_system-mt \
+        -lboost_date_time-mt \
+        -lboost_filesystem-mt \
+        -lboost_regex-mt \
+        -lboost_chrono-mt \
+        -lboost_program_options-mt \
         -lssl \
         -lcrypto \
         -Wl,-Bdynamic \
@@ -244,7 +243,8 @@ linux {
     if(!android) {
         LIBS+= \
             -Wl,-Bdynamic \
-            -lGL
+            -lGL \
+            -ldl
     }
     # currently monero has an issue with "static" build and linunwind-dev,
     # so we link libunwind-dev only for non-Ubuntu distros
@@ -269,6 +269,7 @@ macx {
         -lboost_serialization \
         -lboost_thread-mt \
         -lboost_system \
+        -lboost_system-mt \
         -lboost_date_time \
         -lboost_filesystem \
         -lboost_regex \
